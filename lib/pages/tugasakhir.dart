@@ -4,8 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:myspemob/assets/constant.dart';
 import 'package:intl/intl.dart';
 import 'package:myspemob/pages/homepage.dart';
-import 'package:myspemob/pages/magang.dart';
-import 'package:myspemob/pages/reschedule.dart';
+import 'package:myspemob/pages/inbox.dart';
+import 'package:myspemob/pages/views/history.dart';
 import 'package:myspemob/pages/views/profile.dart';
 
 class tugasAkhirPage extends StatelessWidget {
@@ -119,6 +119,29 @@ class tugasAkhirPage extends StatelessWidget {
                       TextField(
                         decoration: InputDecoration(
                           hintText: "Masukan NIM",
+                          border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(25),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                  SizedBox(height: 16),
+                  const SizedBox(height: 16),
+                  Column(
+                    children: [
+                      Align(
+                        alignment: Alignment.centerLeft,
+                        child: Text(
+                          "Fakultas",
+                          textAlign: TextAlign.left,
+                          style: textTextStyle.copyWith(fontWeight: bold),
+                        ),
+                      ),
+                      const SizedBox(height: 10),
+                      TextField(
+                        decoration: InputDecoration(
+                          hintText: "Masukan Fakultas",
                           border: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(25),
                           ),
@@ -248,14 +271,14 @@ bottomNavigationBar: BottomNavigationBar(
               // Navigasi ke halaman Forum
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => const magangPage(desc: '', title: '',)),
+                MaterialPageRoute(builder: (context) => inboxPage(desc: '', title: '',)),
               );
               break;
             case 2:
               // Navigasi ke halaman History
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => const reschedulePage(desc: '', title: '',)),
+                MaterialPageRoute(builder: (context) => historyPage(desc: '', title: '',)),
               );
               break;
             case 3:

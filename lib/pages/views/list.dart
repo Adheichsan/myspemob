@@ -2,7 +2,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:myspemob/assets/constant.dart';
-import 'package:myspemob/pages/magang.dart';
+import 'package:myspemob/pages/homepage.dart';
+import 'package:myspemob/pages/inbox.dart';
 import 'package:myspemob/pages/views/profile.dart';
 
 class listPage extends StatelessWidget {
@@ -69,7 +70,7 @@ class listPage extends StatelessWidget {
                   children: [
                     CircleAvatar(
                       radius: 50,
-                      backgroundImage: AssetImage("assets/images/focalors.jpg"),
+                      backgroundImage: AssetImage("assets/images/zee.jpg"),
                     ),
                     SizedBox(height: 10),
                     Text("Imam Fauzi",
@@ -85,7 +86,7 @@ class listPage extends StatelessWidget {
                   children: [
                     CircleAvatar(
                       radius: 50,
-                      backgroundImage: AssetImage("assets/images/himeko.jpg"),
+                      backgroundImage: AssetImage("assets/images/fry.jpg"),
                     ),
                     SizedBox(height: 10),
                     Text("Oliver Pradana",
@@ -101,7 +102,7 @@ class listPage extends StatelessWidget {
                   children: [
                     CircleAvatar(
                       radius: 50,
-                      backgroundImage: AssetImage("assets/images/miko.jpg"),
+                      backgroundImage: AssetImage("assets/images/shani.jpg"),
                     ),
                     SizedBox(height: 10),
                     Text("Emmanuel Leonardo",
@@ -117,7 +118,7 @@ class listPage extends StatelessWidget {
                   children: [
                     CircleAvatar(
                       radius: 50,
-                      backgroundImage: AssetImage("assets/images/herta.jpg"),
+                      backgroundImage: AssetImage("assets/images/adel.jpg"),
                     ),
                     SizedBox(height: 10),
                     Text("Rayyan Muzaffar",
@@ -133,7 +134,7 @@ class listPage extends StatelessWidget {
                   children: [
                     CircleAvatar(
                       radius: 50,
-                      backgroundImage: AssetImage("assets/images/anime.jpg"),
+                      backgroundImage: AssetImage("assets/images/zeee.jpg"),
                     ),
                     SizedBox(height: 10),
                     Text("Rio Ferdinand Handoyo",
@@ -193,10 +194,7 @@ class listPage extends StatelessWidget {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                    builder: (context) => profilePage(
-                          desc: '',
-                          title: '',
-                        )),
+                  builder: (context) => HomePage(desc: '',title: '',)),
               );
               break;
             case 1:
@@ -204,10 +202,7 @@ class listPage extends StatelessWidget {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                    builder: (context) => const magangPage(
-                          desc: '',
-                          title: '',
-                        )),
+                  builder: (context) => inboxPage(desc: '',title: '',)),
               );
               break;
             case 2:
@@ -215,10 +210,7 @@ class listPage extends StatelessWidget {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                    builder: (context) => listPage(
-                          desc: '',
-                          title: '',
-                        )),
+                  builder: (context) => inboxPage(desc: '',title: '',)),
               );
               break;
             case 3:
@@ -226,8 +218,7 @@ class listPage extends StatelessWidget {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                    builder: (context) => profilePage(desc: '', title: '',
-                        )),
+                  builder: (context) => profilePage(desc: '', title: '',)),
               );
               break;
           }

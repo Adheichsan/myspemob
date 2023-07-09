@@ -4,7 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:myspemob/assets/constant.dart';
 import 'package:intl/intl.dart';
 import 'package:myspemob/pages/homepage.dart';
-import 'package:myspemob/pages/magang.dart';
+import 'package:myspemob/pages/inbox.dart';
+import 'package:myspemob/pages/views/history.dart';
 import 'package:myspemob/pages/views/profile.dart';
 
 class reschedulePage extends StatelessWidget {
@@ -257,14 +258,14 @@ bottomNavigationBar: BottomNavigationBar(
               // Navigasi ke halaman Forum
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => const magangPage(desc: '', title: '',)),
+                MaterialPageRoute(builder: (context) => inboxPage(desc: '', title: '',)),
               );
               break;
             case 2:
               // Navigasi ke halaman History
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => const reschedulePage(desc: '', title: '',)),
+                MaterialPageRoute(builder: (context) => historyPage(desc: '', title: '',)),
               );
               break;
             case 3:

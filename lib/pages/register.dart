@@ -65,6 +65,7 @@ class DetailPage extends StatelessWidget {
                             contentPadding: const EdgeInsets.symmetric(
                                 horizontal: 16, vertical: 17))),
                   ),
+                  SizedBox(height: 20),
                   Text(
                     "Username",
                     style:
@@ -87,6 +88,7 @@ class DetailPage extends StatelessWidget {
                             contentPadding: const EdgeInsets.symmetric(
                                 horizontal: 16, vertical: 17))),
                   ),
+                  SizedBox(height: 20),
                   Text(
                     "E-Mail",
                     style:
@@ -109,6 +111,7 @@ class DetailPage extends StatelessWidget {
                             contentPadding: const EdgeInsets.symmetric(
                                 horizontal: 16, vertical: 17))),
                   ),
+                  SizedBox(height: 20),
                   Text(
                     "Phone Number",
                     style:
@@ -131,6 +134,30 @@ class DetailPage extends StatelessWidget {
                             contentPadding: const EdgeInsets.symmetric(
                                 horizontal: 16, vertical: 17))),
                   ),
+                  SizedBox(height: 20),
+                  Text(
+                    "Profession",
+                    style:
+                        textTextStyle.copyWith(fontSize: 12, fontWeight: bold),
+                  ),
+                  const SizedBox(height: 10),
+                  Container(
+                    width: double.infinity,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(20),
+                      color: whiteColor,
+                    ),
+                    child: TextField(
+                        decoration: InputDecoration(
+                            border: InputBorder.none,
+                            hintText: "Input your profession",
+                            hintStyle: textTextStyle.copyWith(
+                                fontSize: 12,
+                                color: textColor.withOpacity(0.6)),
+                            contentPadding: const EdgeInsets.symmetric(
+                                horizontal: 16, vertical: 17))),
+                  ),
+                  SizedBox(height: 20),
                   Text(
                     "Password",
                     style:
@@ -198,7 +225,7 @@ class DetailPage extends StatelessWidget {
                   ),
                 ),
               ),
-              const SizedBox(height: 10),
+              const SizedBox(height: 50),
             ],
           ),
         ),

@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:myspemob/assets/constant.dart';
-import 'package:myspemob/main.dart';
 import 'package:myspemob/pages/inbox.dart';
 import 'package:myspemob/pages/magang.dart';
-import 'package:myspemob/pages/views/list.dart';
+import 'package:myspemob/pages/views/history.dart';
 import 'package:myspemob/pages/views/profile.dart';
 import 'package:myspemob/pages/reschedule.dart';
 import 'package:myspemob/pages/tugasakhir.dart';
@@ -31,8 +30,8 @@ class HomePage extends StatelessWidget {
                 context,
                 MaterialPageRoute(
                     builder: (context) => inboxPage(
-                          title: LoginPage.judul,
-                          desc: LoginPage.deccc,
+                          title: '',
+                          desc: ''
                         )),
               );
             },
@@ -43,6 +42,9 @@ class HomePage extends StatelessWidget {
 
       // KONTEN
       body: SingleChildScrollView(
+
+
+        // KONTEN JADWAL MAGANG / STUDI INDEPENDEN
         child: Container(
           margin: const EdgeInsets.symmetric(horizontal: 32, vertical: 16),
           child: Column(
@@ -59,10 +61,17 @@ class HomePage extends StatelessWidget {
                 height: 240,
                 child: Stack(
                   children: [
-                    Card(
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => magangPage(desc: desc, title: title)),
+                        );
+                      },
+                      child: Card(
                       clipBehavior: Clip.antiAliasWithSaveLayer,
                       shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(10)),
+                      borderRadius: BorderRadius.circular(10)),
                       elevation: 8,
                       child: Column(
                         children: [
@@ -70,13 +79,15 @@ class HomePage extends StatelessWidget {
                             width: double.infinity,
                             height: 150,
                             child: Image.asset(
-                              "assets/images/hp1.jpg",
+                              "assets/images/magang.jpg",
                               fit: BoxFit.cover,
                             ),
                           )
                         ],
                       ),
                     ),
+                    ),
+                    
                     Positioned(
                       bottom: 0,
                       left: 20,
@@ -86,52 +97,42 @@ class HomePage extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
-                              "Jadwal Magang",
+                              "Jadwal Magang/Studi Independen",
                               style: textTextStyle.copyWith(
                                   fontSize: 17, fontWeight: FontWeight.bold),
                             ),
                             const Row(
                               children: [
-                                Text("Muhamad Bahrul Ulum, S.Kom, M.Kom")
+                                Text("Terjadwal")
                               ],
                             ),
                           ],
                         ),
                       ),
                     ),
-                    Positioned(
-                      bottom: 60,
-                      right: 20,
-                      child: ElevatedButton(
-                        style: ElevatedButton.styleFrom(
-                          backgroundColor: homeButton,
-                        ),
-                        onPressed: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) =>
-                                      magangPage(title: title, desc: desc)));
-                        },
-                        child: Text(
-                          "Daftar",
-                          style: whiteTextStyle.copyWith(fontWeight: bold),
-                        ),
-                      ),
-                    ),
                   ],
                 ),
               ),
+              // KONTEN AKHIR JADWAL MAGANG / STUDI INDEPENDEN
+
+
+
+              // KONTEN JADWAL TUGAS AKHIR
               const SizedBox(height: 40),
               SizedBox(
                 width: double.infinity,
                 height: 240,
                 child: Stack(
                   children: [
-                    Card(
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(context, 
+                        MaterialPageRoute(builder: (context) => tugasAkhirPage(title: title, desc: desc)));
+                      },
+                      child: Card(
                       clipBehavior: Clip.antiAliasWithSaveLayer,
                       shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(10)),
+                      borderRadius: BorderRadius.circular(10)),
                       elevation: 8,
                       child: Column(
                         children: [
@@ -139,12 +140,13 @@ class HomePage extends StatelessWidget {
                             width: double.infinity,
                             height: 150,
                             child: Image.asset(
-                              "assets/images/hp5.jpg",
+                              "assets/images/tgsakhir.jpg",
                               fit: BoxFit.cover,
                             ),
                           )
                         ],
                       ),
+                    ),
                     ),
                     Positioned(
                       bottom: 0,
@@ -164,51 +166,48 @@ class HomePage extends StatelessWidget {
                             ),
                             const Row(
                               children: [
-                                Text("Muhamad Bahrul Ulum, S.Kom, M.Kom")
+                                Text("Belum Ada Jadwal")
                               ],
                             )
                           ],
                         ),
                       ),
                     ),
-                    Positioned(
-                      bottom: 60,
-                      right: 20,
-                      child: ElevatedButton(
-                        style: ElevatedButton.styleFrom(
-                          backgroundColor: homeButton,
-                        ),
-                        onPressed: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => tugasAkhirPage(
-                                      title: title, desc: desc)));
-                        },
-                        child: Text(
-                          "Daftar",
-                          style: whiteTextStyle.copyWith(fontWeight: bold),
-                        ),
-                      ),
-                    ),
                   ],
                 ),
               ),
+              // KONTEN AKHIR JADWAL TUGAS AKHIR
+
+
+
+
+              // PEMBATAS
               const SizedBox(height: 60),
               Text(
-                "Support",
+                "Student Help Center",
                 style: textTextStyle.copyWith(fontSize: 15, fontWeight: bold),
               ),
               const SizedBox(height: 20),
+              // AKHIR PEMBATAS
+
+
+              
+
+              // KONTEN RESCHEDULE
               SizedBox(
                 width: double.infinity,
                 height: 240,
                 child: Stack(
                   children: [
-                    Card(
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(context, 
+                        MaterialPageRoute(builder: (context) => reschedulePage(title: title, desc: desc)));
+                      },
+                      child: Card(
                       clipBehavior: Clip.antiAliasWithSaveLayer,
                       shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(10)),
+                        borderRadius: BorderRadius.circular(10)),
                       elevation: 8,
                       child: Column(
                         children: [
@@ -216,12 +215,13 @@ class HomePage extends StatelessWidget {
                             width: double.infinity,
                             height: 150,
                             child: Image.asset(
-                              "assets/images/hp4.jpg",
+                              "assets/images/re.jpg",
                               fit: BoxFit.cover,
                             ),
                           )
                         ],
                       ),
+                    ),
                     ),
                     Positioned(
                       bottom: 0,
@@ -246,36 +246,27 @@ class HomePage extends StatelessWidget {
                         ),
                       ),
                     ),
-                    Positioned(
-                      bottom: 60,
-                      right: 20,
-                      child: ElevatedButton(
-                        style: ElevatedButton.styleFrom(
-                          backgroundColor: homeButton,
-                        ),
-                        onPressed: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => reschedulePage(
-                                      title: title, desc: desc)));
-                        },
-                        child: Text(
-                          "Daftar",
-                          style: whiteTextStyle.copyWith(fontWeight: bold),
-                        ),
-                      ),
-                    ),
                   ],
                 ),
               ),
+              // KONTEN AKHIR RESCHEDULE
+
+
+
+
+              // KONTEN FORUM
               const SizedBox(height: 40),
               SizedBox(
                 width: double.infinity,
                 height: 240,
                 child: Stack(
                   children: [
-                    Card(
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(context, 
+                        MaterialPageRoute(builder: (context) => inboxPage(title: title, desc: desc)));
+                      },
+                      child: Card(
                       clipBehavior: Clip.antiAliasWithSaveLayer,
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(10)),
@@ -286,12 +277,13 @@ class HomePage extends StatelessWidget {
                             width: double.infinity,
                             height: 150,
                             child: Image.asset(
-                              "assets/images/hp3.jpg",
+                              "assets/images/forum.jpg",
                               fit: BoxFit.cover,
                             ),
                           )
                         ],
                       ),
+                    ),
                     ),
                     Positioned(
                       bottom: 0,
@@ -311,34 +303,19 @@ class HomePage extends StatelessWidget {
                             ),
                             const Row(
                               children: [Text("Forum diskusi antar mahasiswa")],
-                            )
+                            ),
                           ],
-                        ),
-                      ),
-                    ),
-                    Positioned(
-                      bottom: 60,
-                      right: 20,
-                      child: ElevatedButton(
-                        style: ElevatedButton.styleFrom(
-                          backgroundColor: homeButton,
-                        ),
-                        onPressed: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) =>
-                                      inboxPage(title: title, desc: desc)));
-                        },
-                        child: Text(
-                          "Forum",
-                          style: whiteTextStyle.copyWith(fontWeight: bold),
                         ),
                       ),
                     ),
                   ],
                 ),
-              )
+              ),
+              SizedBox(height:48),
+              // KONTEN AKHIR FORUM
+
+
+
             ],
           ),
         ),
@@ -401,7 +378,7 @@ class HomePage extends StatelessWidget {
               // Navigasi ke halaman History
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => listPage(desc: '', title: '',)),
+                MaterialPageRoute(builder: (context) => historyPage(desc: '', title: '',)),
               );
               break;
             case 3:

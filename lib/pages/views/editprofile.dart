@@ -1,6 +1,10 @@
 // ignore_for_file: camel_case_types, must_be_immutable
 
 import 'package:flutter/material.dart';
+import 'package:myspemob/pages/homepage.dart';
+import 'package:myspemob/pages/inbox.dart';
+import 'package:myspemob/pages/views/history.dart';
+import 'package:myspemob/pages/views/profile.dart';
 
 import '../../assets/constant.dart';
 
@@ -29,7 +33,7 @@ class editprofilePage extends StatelessWidget {
               children: [
                 CircleAvatar(
                   radius: 80,
-                  backgroundImage: AssetImage("assets/images/focalors.jpg"),
+                  backgroundImage: AssetImage("assets/images/zee.jpg"),
                 ),
                 SizedBox(height: 32,),
                 Align(
@@ -111,6 +115,79 @@ class editprofilePage extends StatelessWidget {
             ),
           ),
         ),
+      ),
+
+
+
+      // NAVIGATION BOTTOM
+      bottomNavigationBar: BottomNavigationBar(
+        items: <BottomNavigationBarItem>[
+          BottomNavigationBarItem(
+            icon: Image.asset(
+              'assets/icons/home.png',
+              width: 24,
+              height: 24,
+            ),
+            label: '',
+          ),
+          BottomNavigationBarItem(
+            icon: Image.asset(
+              'assets/icons/chat-bubble.png',
+              width: 24,
+              height: 24,
+            ),
+            label: '',
+          ),
+          BottomNavigationBarItem(
+            icon: Image.asset(
+              'assets/icons/history.png',
+              width: 24,
+              height: 24,
+            ),
+            label: '',
+          ),
+          BottomNavigationBarItem(
+            icon: Image.asset(
+              'assets/icons/user.png',
+              width: 24,
+              height: 24,
+            ),
+            label: '',
+          ),
+        ],
+        onTap: (int index) {
+          // Panggil fungsi yang sesuai untuk setiap item yang diklik
+          switch (index) {
+            case 0:
+              // Navigasi ke halaman Home
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => HomePage(desc: '', title: '',)),
+              );
+              break;
+            case 1:
+              // Navigasi ke halaman Forum
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => inboxPage(desc: '', title: '',)),
+              );
+              break;
+            case 2:
+              // Navigasi ke halaman History
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => historyPage(desc: '', title: '',)),
+              );
+              break;
+            case 3:
+              // Navigasi ke halaman Profile
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => profilePage(desc: '', title: '',)),
+              );
+              break;
+          }
+        },
       ),
     );
   }

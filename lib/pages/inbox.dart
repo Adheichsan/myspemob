@@ -2,11 +2,9 @@
 
 import 'package:flutter/material.dart';
 import 'package:myspemob/assets/constant.dart';
-import 'package:myspemob/pages/magang.dart';
+import 'package:myspemob/pages/views/history.dart';
 import 'package:myspemob/pages/views/profile.dart';
 import 'package:myspemob/pages/reschedule.dart';
-import 'package:myspemob/pages/views/list.dart';
-
 import 'homepage.dart';
 
 class inboxPage extends StatelessWidget {
@@ -44,7 +42,7 @@ class inboxPage extends StatelessWidget {
                   child: ClipRRect(
                     borderRadius: BorderRadius.circular(50),
                     child: Image.asset(
-                      "assets/images/miko.jpg",
+                      "assets/images/paksawali.jpg",
                       width: 80,
                       height: 80,
                       fit: BoxFit.cover,
@@ -55,7 +53,7 @@ class inboxPage extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      "Yae Miko",
+                      "7174 - Sawali Wahyu, S.Kom, M.Kom",
                       style: textTextStyle.copyWith(
                         fontSize: 15,
                         fontWeight: FontWeight.bold,
@@ -120,10 +118,7 @@ class inboxPage extends StatelessWidget {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                    builder: (context) => HomePage(
-                          desc: '',
-                          title: '',
-                        )),
+                    builder: (context) => HomePage(desc: '',title: '',)),
               );
               break;
             case 1:
@@ -131,10 +126,7 @@ class inboxPage extends StatelessWidget {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                    builder: (context) => const magangPage(
-                          desc: '',
-                          title: '',
-                        )),
+                    builder: (context) => inboxPage(desc: '',title: '',)),
               );
               break;
             case 2:
@@ -142,10 +134,7 @@ class inboxPage extends StatelessWidget {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                    builder: (context) => listPage(
-                          desc: '',
-                          title: '',
-                        )),
+                    builder: (context) => historyPage(desc: '',title: '',)),
               );
               break;
             case 3:
@@ -153,8 +142,7 @@ class inboxPage extends StatelessWidget {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                    builder: (context) => profilePage(desc: '', title: '',
-                        )),
+                    builder: (context) => profilePage(desc: '', title: '',)),
               );
               break;
           }

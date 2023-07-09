@@ -41,6 +41,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   google_fonts: ^5.1.0
   firebase_core: ^2.14.0
+  firebase_auth: ^4.6.3
 
 dev_dependencies:
   flutter_test:
@@ -66,29 +67,24 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-    - assets/images/1107816.jpg
-    - assets/images/hp1.jpg
-    - assets/images/hp2.jpg
-    - assets/images/hp3.jpg
-    - assets/images/hp4.jpg
-    - assets/images/hp5.jpg
-    - assets/images/1317068.png
-    - assets/images/1317101.jpeg
-    - assets/images/1317264.png
-    - assets/images/1316101.png
+    - assets/images/zee.jpg
+    - assets/images/zeee.jpg
+    - assets/images/fry.jpg
+    - assets/images/shani.jpg
+    - assets/images/adel.jpg
+    - assets/images/re.jpg
+    - assets/images/tgsakhir.jpg
+    - assets/images/magang.jpg
+    - assets/images/forum.jpg
+    - assets/images/paksawali.jpg
     - assets/images/shape.png
     - assets/images/hihang.png
-    - assets/images/focalors.jpg
-    - assets/images/himeko.jpg
-    - assets/images/anime.jpg
-    - assets/images/herta.jpg
     - assets/icons/email.png
     - assets/icons/open-email.png
     - assets/icons/history.png
     - assets/icons/home.png
     - assets/icons/user.png
     - assets/icons/chat-bubble.png
-    - assets/images/miko.jpg
     # - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

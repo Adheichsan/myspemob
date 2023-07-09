@@ -4,7 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:myspemob/assets/constant.dart';
 import 'package:intl/intl.dart';
 import 'package:myspemob/pages/homepage.dart';
-import 'package:myspemob/pages/reschedule.dart';
+import 'package:myspemob/pages/inbox.dart';
+import 'package:myspemob/pages/views/history.dart';
 import 'package:myspemob/pages/views/profile.dart';
 
 class magangPage extends StatelessWidget {
@@ -43,6 +44,8 @@ class magangPage extends StatelessWidget {
         child: Container(
           margin: const EdgeInsets.symmetric(horizontal: 32),
           padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 16),
+          
+          // HEADER
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -63,6 +66,8 @@ class magangPage extends StatelessWidget {
               ),
               Column(
                 children: [
+
+                  // FORM TEMA
                   Column(
                     children: [
                       Align(
@@ -85,6 +90,9 @@ class magangPage extends StatelessWidget {
                     ],
                   ),
                   const SizedBox(height: 16),
+                  
+                  
+                  // FORM JUDUL
                   Column(
                     children: [
                       Align(
@@ -107,6 +115,10 @@ class magangPage extends StatelessWidget {
                     ],
                   ),
                   const SizedBox(height: 16),
+                  
+                  
+                  
+                  // FORM NIM
                   Column(
                     children: [
                       Align(
@@ -129,6 +141,36 @@ class magangPage extends StatelessWidget {
                     ],
                   ),
                   const SizedBox(height: 16),
+                  
+                  
+                  
+                  // FORM FAKULTAS
+                  Column(
+                    children: [
+                      Align(
+                        alignment: Alignment.centerLeft,
+                        child: Text(
+                          "Fakultas",
+                          textAlign: TextAlign.left,
+                          style: textTextStyle.copyWith(fontWeight: bold),
+                        ),
+                      ),
+                      const SizedBox(height: 10),
+                      TextField(
+                        decoration: InputDecoration(
+                          hintText: "Masukan Fakultas Anda",
+                          border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(25),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(height: 16),
+                  
+                  
+                  
+                  // FORM MITRA/PT
                   Column(
                     children: [
                       Align(
@@ -151,6 +193,10 @@ class magangPage extends StatelessWidget {
                     ],
                   ),
                   const SizedBox(height: 16),
+                  
+                  
+                  
+                  // FORM TANGGAL MULAI
                   Column(
                     children: [
                       Align(
@@ -179,6 +225,10 @@ class magangPage extends StatelessWidget {
                     ],
                   ),
                   const SizedBox(height: 16),
+                  
+                  
+                  
+                  // FORM TANGGAL SELESAI
                   Column(
                     children: [
                       Align(
@@ -279,14 +329,14 @@ class magangPage extends StatelessWidget {
               // Navigasi ke halaman Forum
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => const magangPage(desc: '', title: '',)),
+                MaterialPageRoute(builder: (context) => inboxPage(desc: '', title: '',)),
               );
               break;
             case 2:
               // Navigasi ke halaman History
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => const reschedulePage(desc: '', title: '',)),
+                MaterialPageRoute(builder: (context) => historyPage(desc: '', title: '',)),
               );
               break;
             case 3:

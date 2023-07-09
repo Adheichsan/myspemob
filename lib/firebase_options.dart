@@ -49,6 +49,7 @@ class DefaultFirebaseOptions {
     messagingSenderId: '652245396163',
     projectId: 'fireflutter-efd06',
     authDomain: 'fireflutter-efd06.firebaseapp.com',
+    databaseURL: 'https://fireflutter-efd06-default-rtdb.asia-southeast1.firebasedatabase.app',
     storageBucket: 'fireflutter-efd06.appspot.com',
     measurementId: 'G-G3D0VRVRQ0',
   );
@@ -58,6 +59,7 @@ class DefaultFirebaseOptions {
     appId: '1:652245396163:android:beb99c27a2bce618735076',
     messagingSenderId: '652245396163',
     projectId: 'fireflutter-efd06',
+    databaseURL: 'https://fireflutter-efd06-default-rtdb.asia-southeast1.firebasedatabase.app',
     storageBucket: 'fireflutter-efd06.appspot.com',
   );
 
@@ -66,6 +68,7 @@ class DefaultFirebaseOptions {
     appId: '1:652245396163:ios:9584829f4b92f079735076',
     messagingSenderId: '652245396163',
     projectId: 'fireflutter-efd06',
+    databaseURL: 'https://fireflutter-efd06-default-rtdb.asia-southeast1.firebasedatabase.app',
     storageBucket: 'fireflutter-efd06.appspot.com',
     iosClientId: '652245396163-tlfcuoetbk3t4p4lh6r5a7he20d79p09.apps.googleusercontent.com',
     iosBundleId: 'com.example.myspemob',
@@ -76,6 +79,7 @@ class DefaultFirebaseOptions {
     appId: '1:652245396163:ios:b6e458c6ca986bfb735076',
     messagingSenderId: '652245396163',
     projectId: 'fireflutter-efd06',
+    databaseURL: 'https://fireflutter-efd06-default-rtdb.asia-southeast1.firebasedatabase.app',
     storageBucket: 'fireflutter-efd06.appspot.com',
     iosClientId: '652245396163-hgo0i0b5qrtai8mg8b4jbjdib8pivf65.apps.googleusercontent.com',
     iosBundleId: 'com.example.myspemob.RunnerTests',

@@ -1,12 +1,15 @@
-// import 'package:firebase_core/firebase_core.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:myspemob/assets/constant.dart';
-// import 'package:myspemob/firebase_options.dart';
-import 'package:myspemob/pages/homepage.dart';
-import 'package:myspemob/pages/register.dart';
+import 'package:myspemob/pages/login.dart';
+import 'firebase_options.dart';
 
-void main() {
+void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   runApp(MyApp());
 }
 
@@ -17,14 +20,14 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      home: LoginPage(),
+      home: mainPage(),
     );
   }
 }
 
-class LoginPage extends StatelessWidget {
+class mainPage extends StatelessWidget {
 
-  const LoginPage({super.key});
+  const mainPage({super.key});
 
   static const judul = "lorem ipsum";
   static const deccc = "lorem ipsum";
@@ -34,121 +37,23 @@ class LoginPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color(0xffF5F5F5),
-      
       body: SingleChildScrollView(
         child: Container(
-          margin: const EdgeInsets.symmetric(horizontal: 32),
+          margin: const EdgeInsets.symmetric(horizontal: 32, vertical: 100),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Align(
-                alignment: Alignment.topLeft,
-                  child: Image.asset(
-                    'assets/images/shape.png',
-                    width: 150, height: 150,
+                alignment: Alignment.center,
+                  child: 
+                  Image.asset(
+                    'assets/images/hihang.png',
+                    width: 400, height: 400,
                   ),
               ),
-              
-              Text("Welcome Back", style: textTextStyle.copyWith(fontSize: 30, fontWeight: bold),),
-              const SizedBox(height: 11,),
-              Text("hihang hoheng hihang hoheng hihang hoheng hihang hoheng hihang hoheng", style: secondaryTextStyle.copyWith(fontSize: 12),
-              textAlign: TextAlign.center,),
-              const SizedBox(
-                height: 64,
-              ),
-              
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: [
-                  Text(
-                    "E-mail",
-                    style: textTextStyle.copyWith(fontSize: 12, fontWeight: bold
-                    ),
-                  ),
-                  const SizedBox(height: 10,),
-                  Container(
-                    width: double.infinity,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10),
-                      color: whiteColor,
-                    ),
-                    child: TextField(
-                      decoration: InputDecoration(
-                        border: InputBorder.none,
-                        hintText: "Input Your Email",
-                        hintStyle: textTextStyle.copyWith(fontSize: 12, color: textColor.withOpacity(0.6)),
-                        contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 17)
-                      )
-                    ),
-                  ),
-                  const SizedBox(height: 15,),
-
-                  Text(
-                    "Password",
-                    style: textTextStyle.copyWith(fontSize: 12, fontWeight: bold
-                    ),
-                  ),
-                  const SizedBox(height: 10,),
-                  Container(
-                    width: double.infinity,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10),
-                      color: whiteColor,
-                    ),
-                    child: TextField(
-                      decoration: InputDecoration(
-                        border: InputBorder.none,
-                        hintText: "Enter Your Password",
-                        hintStyle: textTextStyle.copyWith(fontSize: 12, color: textColor.withOpacity(0.6)),
-                        contentPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 17),
-                        suffixIcon: const Icon(Icons.visibility_off)
-                      )
-                    ),
-                  )
-                ],
-              ),
-              const SizedBox(height: 20,),
-              
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Row(
-                    children: [
-                      Container(
-                        width: 24,
-                        height: 24,
-                        decoration: BoxDecoration(
-                          color: buttonColor,
-                          borderRadius: BorderRadius.circular(5), 
-                        ),
-                      ),
-                      const SizedBox(width: 15),
-                      Text("Remember Me", style: greyTextStyle.copyWith(fontSize: 12),)
-                    ],
-                  ),
-                  Text("Forgot Password ?", style: textTextStyle.copyWith(fontSize: 12),)
-                ],
-              ),
-              const SizedBox(height: 32),
-              Container(
-                width: double.infinity,
-                height: 50,
-                margin: const EdgeInsets.symmetric(horizontal: 20),
-                child: ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: primaryButtonColor,
-                  ),
-                  onPressed: (){
-                      Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => HomePage(desc: '', title: '',)),
-                    );
-                  }, 
-                  child: Text("LOGIN", style: whiteTextStyle.copyWith(fontWeight: bold),),
-                ),
-              ),
-              const SizedBox(height: 8),
+              Text("Whezys",
+              style: textTextStyle.copyWith(fontSize: 24, fontWeight: FontWeight.bold),),
+              const SizedBox(height: 64),
               Container(
                 width: double.infinity,
                 height: 50,
@@ -161,25 +66,16 @@ class LoginPage extends StatelessWidget {
                     Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => DetailPage(
-                        title: judul,
-                        desc: deccc,
+                      builder: (context) => loginPage(
+                        title: '',
+                        desc: '',
                         )
                       )
                     );
                   }, 
-                  child: Text("REGISTER", style: whiteTextStyle.copyWith(fontWeight: bold),),
+                  child: Text("Get Started !", style: whiteTextStyle.copyWith(fontWeight: bold),),
                 ),
               ),
-              const SizedBox(height: 10),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text("You Don't have an account yet? ", style: secondaryTextStyle.copyWith(fontSize: 12),),
-                  Text("Sign Up", style: tncTextStyle.copyWith(fontSize: 12),),
-                ],
-              ),
-              const SizedBox(height: 20),
             ],
           ),
         ),

@@ -2,11 +2,11 @@
 
 import 'package:flutter/material.dart';
 import 'package:myspemob/assets/constant.dart';
-import 'package:myspemob/main.dart';
 import 'package:myspemob/pages/homepage.dart';
-import 'package:myspemob/pages/magang.dart';
-import 'package:myspemob/pages/reschedule.dart';
+import 'package:myspemob/pages/inbox.dart';
+import 'package:myspemob/pages/login.dart';
 import 'package:myspemob/pages/views/editprofile.dart';
+import 'package:myspemob/pages/views/history.dart';
 import 'package:myspemob/pages/views/list.dart';
 
 class profilePage extends StatelessWidget {
@@ -33,7 +33,7 @@ class profilePage extends StatelessWidget {
             children: [
               const CircleAvatar(
                 radius: 80,
-                backgroundImage: AssetImage('assets/images/focalors.jpg'),
+                backgroundImage: AssetImage('assets/images/zee.jpg'),
               ),
               const SizedBox(height: 16),
               Text("Imam Fauzi",
@@ -116,7 +116,7 @@ class profilePage extends StatelessWidget {
                         actions: [
                           TextButton(onPressed: () {
                             Navigator.push(context,
-                             MaterialPageRoute(builder: (context) => LoginPage()));
+                             MaterialPageRoute(builder: (context) => loginPage(title: '', desc: '',)));
                           }, child: Text("Yes"), 
                         ),
                         TextButton(onPressed: (){
@@ -195,10 +195,7 @@ class profilePage extends StatelessWidget {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                    builder: (context) => HomePage(
-                          desc: '',
-                          title: '',
-                        )),
+                    builder: (context) => HomePage(desc: '',title: '',)),
               );
               break;
             case 1:
@@ -206,10 +203,7 @@ class profilePage extends StatelessWidget {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                    builder: (context) => const magangPage(
-                          desc: '',
-                          title: '',
-                        )),
+                  builder: (context) => inboxPage(desc: '',title: '',)),
               );
               break;
             case 2:
@@ -217,10 +211,7 @@ class profilePage extends StatelessWidget {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                    builder: (context) => const reschedulePage(
-                          desc: '',
-                          title: '',
-                        )),
+                  builder: (context) => historyPage(desc: '',title: '',)),
               );
               break;
             case 3:
@@ -228,10 +219,7 @@ class profilePage extends StatelessWidget {
               Navigator.push(
                 context,
                 MaterialPageRoute(
-                    builder: (context) => profilePage(
-                          desc: '',
-                          title: '',
-                        )),
+                  builder: (context) => profilePage(desc: '',title: '',)),
               );
               break;
           }
