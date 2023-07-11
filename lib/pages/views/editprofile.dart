@@ -33,7 +33,7 @@ class editprofilePage extends StatelessWidget {
               children: [
                 CircleAvatar(
                   radius: 80,
-                  backgroundImage: AssetImage("assets/images/zee.jpg"),
+                  backgroundImage: AssetImage("assets/images/imamf.jpg"),
                 ),
                 SizedBox(height: 32,),
                 Align(

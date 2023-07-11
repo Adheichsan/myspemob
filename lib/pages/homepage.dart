@@ -20,7 +20,7 @@ class HomePage extends StatelessWidget {
       backgroundColor: const Color(0xffF5F5F5),
       appBar: AppBar(
         backgroundColor: whiteColor,
-        title: const Text('Whezys', style: TextStyle(color: Colors.black)),
+        title: const Text('RUBIKOM', style: TextStyle(color: Colors.black)),
         automaticallyImplyLeading: false,
         centerTitle: true,
         actions: [

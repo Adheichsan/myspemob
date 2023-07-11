@@ -35,7 +35,7 @@ class reschedulePage extends StatelessWidget {
       backgroundColor: const Color(0xffF5F5F5),
       appBar: AppBar(
         backgroundColor: whiteColor,
-        title: const Text('Whezys', style: TextStyle(color: Colors.black)),
+        title: const Text('RUBIKOM', style: TextStyle(color: Colors.black)),
         centerTitle: true,
         iconTheme: const IconThemeData(color: Colors.black),
       ),
@@ -209,7 +209,7 @@ class reschedulePage extends StatelessWidget {
 
       // BOTTOM NAVIGATION
 
-bottomNavigationBar: BottomNavigationBar(
+      bottomNavigationBar: BottomNavigationBar(
         items: <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Image.asset(

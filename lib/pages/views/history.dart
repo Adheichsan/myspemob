@@ -19,7 +19,7 @@ class historyPage extends StatelessWidget {
       backgroundColor: const Color(0xffF5F5F5),
       appBar: AppBar(
         backgroundColor: whiteColor,
-        title: Text("Whezys",
+        title: Text("RUBIKOM",
         style: TextStyle(color: Colors.black)),
         centerTitle: true,
         iconTheme: const IconThemeData(color: Colors.black),

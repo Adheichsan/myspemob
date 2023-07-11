@@ -18,7 +18,7 @@ class listPage extends StatelessWidget {
       backgroundColor: const Color(0xffF5F5F5),
       appBar: AppBar(
         backgroundColor: whiteColor,
-        title: const Text('Whezys', style: TextStyle(color: Colors.black)),
+        title: const Text('RUBIKOM', style: TextStyle(color: Colors.black)),
         centerTitle: true,
         iconTheme: const IconThemeData(color: Colors.black),
       ),
@@ -70,7 +70,7 @@ class listPage extends StatelessWidget {
                   children: [
                     CircleAvatar(
                       radius: 50,
-                      backgroundImage: AssetImage("assets/images/zee.jpg"),
+                      backgroundImage: AssetImage("assets/images/imamf.jpg"),
                     ),
                     SizedBox(height: 10),
                     Text("Imam Fauzi",
@@ -86,7 +86,7 @@ class listPage extends StatelessWidget {
                   children: [
                     CircleAvatar(
                       radius: 50,
-                      backgroundImage: AssetImage("assets/images/fry.jpg"),
+                      backgroundImage: AssetImage("assets/images/oliver.jpg"),
                     ),
                     SizedBox(height: 10),
                     Text("Oliver Pradana",
@@ -102,7 +102,7 @@ class listPage extends StatelessWidget {
                   children: [
                     CircleAvatar(
                       radius: 50,
-                      backgroundImage: AssetImage("assets/images/shani.jpg"),
+                      backgroundImage: AssetImage("assets/images/emmanuel.jpg"),
                     ),
                     SizedBox(height: 10),
                     Text("Emmanuel Leonardo",
@@ -118,7 +118,7 @@ class listPage extends StatelessWidget {
                   children: [
                     CircleAvatar(
                       radius: 50,
-                      backgroundImage: AssetImage("assets/images/adel.jpg"),
+                      backgroundImage: AssetImage("assets/images/rayyan.jpg"),
                     ),
                     SizedBox(height: 10),
                     Text("Rayyan Muzaffar",
@@ -134,7 +134,7 @@ class listPage extends StatelessWidget {
                   children: [
                     CircleAvatar(
                       radius: 50,
-                      backgroundImage: AssetImage("assets/images/zeee.jpg"),
+                      backgroundImage: AssetImage("assets/images/rio.jpg"),
                     ),
                     SizedBox(height: 10),
                     Text("Rio Ferdinand Handoyo",

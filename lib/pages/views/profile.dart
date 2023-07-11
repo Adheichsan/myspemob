@@ -33,7 +33,7 @@ class profilePage extends StatelessWidget {
             children: [
               const CircleAvatar(
                 radius: 80,
-                backgroundImage: AssetImage('assets/images/zee.jpg'),
+                backgroundImage: AssetImage('assets/images/imamf.jpg'),
               ),
               const SizedBox(height: 16),
               Text("Imam Fauzi",
@@ -141,7 +141,7 @@ class profilePage extends StatelessWidget {
                   Image.asset("assets/images/hihang.png",
                   height: 24,
                   width: 24,),
-                  const Text("|| Hihang-hoheng"),
+                  const Text("Rubikom"),
                 ],
               ),
             ],

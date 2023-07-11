@@ -7,14 +7,11 @@ import 'firebase_options.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp(
-    options: DefaultFirebaseOptions.currentPlatform,
-  );
+  await Firebase.initializeApp();
   runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-
   const MyApp({super.key});
 
   @override
@@ -26,12 +23,10 @@ class MyApp extends StatelessWidget {
 }
 
 class mainPage extends StatelessWidget {
-
   const mainPage({super.key});
 
   static const judul = "lorem ipsum";
   static const deccc = "lorem ipsum";
-
 
   @override
   Widget build(BuildContext context) {
@@ -45,14 +40,27 @@ class mainPage extends StatelessWidget {
             children: [
               Align(
                 alignment: Alignment.center,
-                  child: 
-                  Image.asset(
-                    'assets/images/hihang.png',
-                    width: 400, height: 400,
-                  ),
+                child: Image.asset(
+                  'assets/images/hihang.png',
+                  width: 400,
+                  height: 400,
+                ),
               ),
-              Text("Whezys",
-              style: textTextStyle.copyWith(fontSize: 24, fontWeight: FontWeight.bold),),
+
+              
+              Text(
+                "RUBIKOM",
+                style: textTextStyle.copyWith(
+                    fontSize: 24, fontWeight: FontWeight.bold),
+              ),
+              SizedBox(
+                height: 10,
+              ),
+              Text(
+                "Ruang Bimbingan Fasilkom",
+                style: textTextStyle.copyWith(
+                    fontSize: 12, fontWeight: FontWeight.normal),
+              ),
               const SizedBox(height: 64),
               Container(
                 width: double.infinity,
@@ -62,18 +70,19 @@ class mainPage extends StatelessWidget {
                   style: ElevatedButton.styleFrom(
                     backgroundColor: tncButtonColor,
                   ),
-                  onPressed: (){
+                  onPressed: () {
                     Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => loginPage(
-                        title: '',
-                        desc: '',
-                        )
-                      )
-                    );
-                  }, 
-                  child: Text("Get Started !", style: whiteTextStyle.copyWith(fontWeight: bold),),
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => loginPage(
+                                  title: '',
+                                  desc: '',
+                                )));
+                  },
+                  child: Text(
+                    "Get Started !",
+                    style: whiteTextStyle.copyWith(fontWeight: bold),
+                  ),
                 ),
               ),
             ],
